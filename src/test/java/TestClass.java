@@ -15,6 +15,7 @@ public class TestClass {
         System.out.println("amazon page loaded");
         driver.findElement(By.xpath("//input[@id='twotabsearchtextbox']")).sendKeys("Java Books");
         driver.findElement(By.xpath("//div[@id='nav-search']/form[@role='search']//input[@value='Go']")).click();
+        System.out.println(driver.getCurrentUrl());
         Thread.sleep(5);
         driver.quit();
     }
