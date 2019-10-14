@@ -12,6 +12,7 @@ public class TestClass {
         System.setProperty("webdriver.chrome.driver", "src/test/java/chromedriver");
         driver = new ChromeDriver();
         driver.get("https://www.amazon.com");
+        System.out.println("amazon page loaded");
         driver.findElement(By.xpath("//input[@id='twotabsearchtextbox']")).sendKeys("Java Books");
         driver.findElement(By.xpath("//div[@id='nav-search']/form[@role='search']//input[@value='Go']")).click();
         Thread.sleep(5);
