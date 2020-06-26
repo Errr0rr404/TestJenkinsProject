@@ -1,3 +1,5 @@
+package com.jenkins;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -9,7 +11,7 @@ public class TestClass {
 
     @Test
     public void testJenkinsExecution() throws InterruptedException {
-        System.setProperty("webdriver.chrome.driver", "src/test/java/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "src/test/java/com/jenkins/chromedriver");
         driver = new ChromeDriver();
         driver.get("https://www.amazon.com");
         System.out.println("amazon page loaded");
@@ -17,6 +19,7 @@ public class TestClass {
         driver.findElement(By.xpath("//div[@id='nav-search']/form[@role='search']//input[@value='Go']")).click();
         System.out.println(driver.getCurrentUrl());
         Thread.sleep(5);
+        System.out.println("Test Passed");
         driver.quit();
     }
 }
